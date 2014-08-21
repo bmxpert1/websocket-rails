@@ -73,6 +73,7 @@ class @WebSocketRails
       else if event.is_channel()
         @dispatch_channel event
       else if event.is_ping()
+        @dispatch event
         @pong()
       else
         @dispatch event
